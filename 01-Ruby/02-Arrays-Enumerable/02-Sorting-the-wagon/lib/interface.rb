@@ -14,7 +14,7 @@ begin
 
 end while name != ""
   nombre_total = students.length
-  puts "voici les #{nombre_total} étudians : #{wagon_sort(students)}"
+  puts "voici les #{nombre_total} étudiants : #{wagon_sort(students)}"
 
 # TstudentODO: Call `wagon_sort` method and display the sorted student list
 
