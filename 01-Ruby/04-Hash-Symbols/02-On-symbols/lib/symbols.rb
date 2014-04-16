@@ -8,11 +8,11 @@
 # irb> "foo".object_id
 
 def are_identical_symbols_same_objects?
-  # TODO: true or false?
+  true
 end
 
 def are_identical_strings_same_objects?
-  # TODO: true or false?
+  true
 end
 
 
