@@ -51,12 +51,12 @@ class BankAccount
     # TODO: Check if there is a password and if so if it is correct
     if args[:password]
       if args[:password] == @password
-        @transactions.each {|transaction| "#{transactions}"}.join(",")
-        else
-          "wrong password"
+        @transactions.each {|transaction| "#{transaction}"}.join(",")
+      else
+        "wrong password"
       end
     else
-          "no password given"
+      "no password given"
     end
 
     # TODO: return a string displaying the transactions, BUT NOT return the transaction array !
@@ -65,13 +65,13 @@ class BankAccount
   def iban
     # TODO: Hide the middle of the IBAN like FR14**************606 and return it
     new_iban = @iban[0,3] + "***********" + @iban[-3, -1]
-    p "#{new_iban}"
   end
 
   def to_s
     # Method used when printing account object as string (also used for string interpolation)
     # TODO: Displays the account owner, the hidden iban and the position of the account
-    puts "here your account informations #{@name} #{@iban} #{@position}"
+    iban
+    puts "here your account informations #{@name} #{iban} #{@position}"
   end
 
   private
