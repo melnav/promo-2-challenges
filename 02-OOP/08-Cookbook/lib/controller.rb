@@ -18,8 +18,9 @@ class Controller
     @cookbook.add_recipe(name_recipe)
   end
 
-   def delete(choice)
+  def delete(choice)
     @cookbook.delete_one_recipe(choice)
   end
 
 end
+

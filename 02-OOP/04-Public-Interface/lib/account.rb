@@ -51,7 +51,7 @@ class BankAccount
     # TODO: Check if there is a password and if so if it is correct
     if args[:password]
       if args[:password] == @password
-        @transactions.each {|transaction| "#{transaction}"}.join(",")
+        @transactions.each {|transaction| "#{@transaction}"}.join(",")
       else
         "wrong password"
       end

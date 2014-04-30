@@ -1,4 +1,5 @@
 require 'csv'
+require 'recipe'
 
 class Cookbook
 
@@ -12,9 +13,9 @@ class Cookbook
   end
 
   def load_csv(file)
-    @contents = []
+    @contents = Recipe.new(title, descriptif, ingredients)
     CSV.foreach(file) do |row|
-      @contents << row.first
+      @contents << row
     end
   end
 
@@ -51,4 +52,9 @@ end
 #
 #mycookbook.add_recipe('Boeuf carottes')
 #mycookbook.delete_one_recipe(2)
+
+# montitre;madescription;mesingredients
+
+# Quand on load le CSV
+# Pour chaque row on va utiliser les colonnes pour instancier un nouvel objet recette
 
