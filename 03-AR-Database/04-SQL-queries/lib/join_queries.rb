@@ -20,12 +20,14 @@ end
 
 def top_five_rock_artists(db)
   #TODO: return list of top 5 rock artists
-  SELECT artist.name FROM artist
+  SELECT artist.name, COUNT(track.name)
+  FROM artist
     JOIN album ON album.artistId == artistId
     JOIN track ON albumId == track.albumId
     JOIN genre ON genre.id == track.genreId
   WHERE genre.name == "Rock"
 
   GROUP BY artist.name
+
 
 end
