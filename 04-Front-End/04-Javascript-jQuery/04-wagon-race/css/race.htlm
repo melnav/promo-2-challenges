@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+<table class="racer_table">
+  <tr id="player1_race">
+    <td></td>
+    <td class="active"></td>
+    <td></td>
+    <td></td>
+    ... etc ...
+  </tr>
+  <tr id="player2_race">
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="active"></td>
+    ... etc ...
+  </tr>
+</table>
+</html>
